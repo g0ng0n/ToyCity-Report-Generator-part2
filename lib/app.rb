@@ -87,7 +87,7 @@ def print_discounts(discounts)
     puts "*Average Discounts %#{avg_discount.round(2)}" ;
 end
 
-def prepare_purchase_information(toy)
+def print_purchase_information(toy)
     sales = 0;
     prices = [];
     discounts = [];
@@ -121,7 +121,7 @@ end
 def print_report(toy)
     
     print_toy_main_infomation(toy)
-    prepare_purchase_information(toy)
+    print_purchase_information(toy)
 
 end
 
@@ -138,11 +138,77 @@ def create_products_report
     end
 end
 
+def print_brands_header
+    puts " _                         _     "
+    puts "| |                       | |    "
+    puts "| |__  _ __ __ _ _ __   __| |___ "
+    puts "| '_ \\| '__/ _` | '_ \\ / _` / __|"
+    puts "| |_) | | | (_| | | | | (_| \\__ \\"
+    puts "|_.__/|_|  \\__,_|_| |_|\\__,_|___/"
+    puts
+end
+def print_brand_information(name,actualStock,prices,totalSalesVolume)
+    # Print the name of the brand
+    puts "*Toy's Brand Name #{name}";
+    # Print the number of the brand's toys we stock
+    puts "*Toy's Brand Stock #{actualStock}";
+      
+    # Calculate and print the average price the toy sold for
+    avg_price=prices.inject(:+) /  prices.size;
+    puts "*Average Price for the Brand #{name} - $#{avg_price.round(3)}" ;
+    print_line_separator
+    puts "*The total sales volume of all toys for the brand #{name} is: $ #{totalSalesVolume.inject(:+).round(2)}" ;
+
+end
+def process_brands_information(brandStructure)
+    prices = [];
+    sales=[];
+    totalSalesVolume = [];
+  
+    #Setup an stock counter in order to count the stock for the brands
+    actualStock=0;
+    brandStructure.each do |brand|
+      # Count the number of the brand's toys we stock
+      actualStock = actualStock + brand["stock"]
+      # Added the full price to the prices array in order to
+      # get the average bellow
+      prices.push(brand["full-price"].to_f);
+      #Calculate the total sales for this brand
+      brand["purchases"].each{ |p| totalSalesVolume.push(p["price"]) }
+    end
+
+    print_brand_information(brandStructure[0]["brand"],
+      actualStock,prices,totalSalesVolume)
+end
+def create_brands_report
+
+    brandStructure = [];
+    repeatedBrandNameArray=[];
+    $brands.each do |brandName|
+      #checked if we repeated a brandName by see if the brandName String
+      # Inside the repeatedBrandNameArray
+      if !(repeatedBrandNameArray.include? brandName)
+        print_line_separator;
+        #I select all the Brands from the Products Data Structure
+        brandStructure = $products_hash["items"].select {|item| item["brand"] == brandName}
+        if (brandStructure.size>0)
+          process_brands_information(brandStructure);
+        end
+      end
+      #added the brand name in the repeatedBrandNameArray to check,in the next iteration,
+      #if the brandName exist
+      repeatedBrandNameArray.push(brandName)
+    end
+
+end
+
 def create_report
   $brands =[];
   print_date_time;
   print_products_header;
   create_products_report;
+  print_brands_header;
+  create_brands_report;
 
 end
 

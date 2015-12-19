@@ -1,0 +1,54 @@
+--------------------
+Today's date 2015-12-19 18:57:16 -0300
+--------------------
+                     _            _       
+                    | |          | |      
+ _ __  _ __ ___   __| |_   _  ___| |_ ___ 
+| '_ \| '__/ _ \ / _` | | | |/ __| __/ __|
+| |_) | | | (_) | (_| | |_| | (__| |_\__ \
+| .__/|_|  \___/ \__,_|\__,_|\___|\__|___/
+| |                                       
+|_|                                       
+--------------------
+*Toy's name LEGO Iron Man vs. Ultron
+*Retail price of toy: $22.99
+*Total purchases for the toy LEGO Iron Man vs. Ultron are 2
+*The total amount of sales are 36.98
+*Average Price $18.49
+*Average Discounts %19.57
+--------------------
+--------------------
+*Toy's name Nano Block Empire State Building
+*Retail price of toy: $49.99
+*Total purchases for the toy Nano Block Empire State Building are 2
+*The total amount of sales are 68.98
+*Average Price $34.49
+*Average Discounts %31.01
+--------------------
+--------------------
+*Toy's name LEGO Firehouse Headquarters
+*Retail price of toy: $199.99
+*Total purchases for the toy LEGO Firehouse Headquarters are 2
+*The total amount of sales are 379.98
+*Average Price $189.99
+*Average Discounts %5.0
+--------------------
+ _                         _     
+| |                       | |    
+| |__  _ __ __ _ _ __   __| |___ 
+| '_ \| '__/ _` | '_ \ / _` / __|
+| |_) | | | (_| | | | | (_| \__ \
+|_.__/|_|  \__,_|_| |_|\__,_|___/
+
+--------------------
+*Toy's Brand Name LEGO
+*Toy's Brand Stock 55
+*Average Price for the Brand LEGO - $111.49
+--------------------
+*The total sales volume of all toys for the brand LEGO is: $ 416.96
+--------------------
+*Toy's Brand Name Nano Blocks
+*Toy's Brand Stock 12
+*Average Price for the Brand Nano Blocks - $49.99
+--------------------
+*The total sales volume of all toys for the brand Nano Blocks is: $ 68.98
