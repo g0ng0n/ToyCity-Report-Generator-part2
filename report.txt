@@ -1,5 +1,5 @@
 --------------------
-Today's date 2015-12-19 18:57:16 -0300
+Today's date 2015-12-19 19:14:25 -0300
 --------------------
                      _            _       
                     | |          | |      
@@ -17,14 +17,12 @@ Today's date 2015-12-19 18:57:16 -0300
 *Average Price $18.49
 *Average Discounts %19.57
 --------------------
---------------------
 *Toy's name Nano Block Empire State Building
 *Retail price of toy: $49.99
 *Total purchases for the toy Nano Block Empire State Building are 2
 *The total amount of sales are 68.98
 *Average Price $34.49
 *Average Discounts %31.01
---------------------
 --------------------
 *Toy's name LEGO Firehouse Headquarters
 *Retail price of toy: $199.99
@@ -44,11 +42,10 @@ Today's date 2015-12-19 18:57:16 -0300
 *Toy's Brand Name LEGO
 *Toy's Brand Stock 55
 *Average Price for the Brand LEGO - $111.49
---------------------
 *The total sales volume of all toys for the brand LEGO is: $ 416.96
 --------------------
 *Toy's Brand Name Nano Blocks
 *Toy's Brand Stock 12
 *Average Price for the Brand Nano Blocks - $49.99
---------------------
 *The total sales volume of all toys for the brand Nano Blocks is: $ 68.98
+--------------------
