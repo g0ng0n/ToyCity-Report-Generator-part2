@@ -1,0 +1,11 @@
+commit 6e0bc21a569a623db7c4af227be02a407b7cc45f
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Fri Dec 18 23:47:37 2015 -0300
+
+    added some boiler plate code to the app.rb file
+
+commit 70c30267bb7a6b399b688e103446c77a86e5a5b6
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Thu Dec 17 20:14:28 2015 -0300
+
+    initial commit

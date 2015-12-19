@@ -1,4 +1,4 @@
-
+require 'json'
 # Print "Sales Report" in ascii art
 
 # Print today's date
@@ -27,6 +27,78 @@ def setup_files
     file = File.read(path)
     $products_hash = JSON.parse(file)
     $report_file = File.new("report.txt", "w+")
+end
+
+def print_line_separator
+    puts '-' * 20
+end
+
+def print_date_time
+    # Print today's date
+    t = Time.now()
+    t.strftime("The date is %m/%d/%y")
+    print_line_separator
+    puts "Today's date #{t}";
+    print_line_separator
+end
+
+def print_products_header
+    puts "                     _            _       "
+    puts "                    | |          | |      "
+    puts " _ __  _ __ ___   __| |_   _  ___| |_ ___ "
+    puts "| '_ \\| '__/ _ \\ / _` | | | |/ __| __/ __|"
+    puts "| |_) | | | (_) | (_| | |_| | (__| |_\\__ \\"
+    puts "| .__/|_|  \\___/ \\__,_|\\__,_|\\___|\\__|___/"
+    puts "| |                                       "
+    puts "|_|                                       "
+end
+
+def prepare_purchase_information(toy)
+    toy["purchases"].each do |purchase|
+      sales = sales + purchase["price"];
+      prices.push(purchase["price"]);
+      discount= ((purchase["price"].to_f/toy["full-price"].to_f))*100 ;
+      discountPerc = 100 - discount
+    
+
+      discounts.push(discountPerc);
+    end
+
+end
+
+def print_toy_main_infomation(toy)
+    puts "*Toy's name #{toy["title"]}";
+    # Print the retail price of the toy
+    puts "*Retail price of toy: $#{toy["full-price"]}";
+    # Calculate and print the total number of purchases
+    puts "*Total purchases for the toy #{toy["title"]} are #{toy["purchases"].size}";
+end
+
+
+def print_report(toy)
+    prices = [];
+    discounts = [];
+    sales = 0;
+    total_sales = total_sales + toy["purchases"].size;
+    print_toy_main_infomation(toy)
+    prepare_purchase_information(toy)
+
+end
+
+def create_products_report
+    products_hash["items"].each do |toy|
+      print_line_separator
+      print_report(toy)
+      print_line_separator
+    end
+end
+
+def create_report
+  print_date_time;
+  print_products_header;
+  create_products_report;
+
+
 end
 
 def start
