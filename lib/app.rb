@@ -36,11 +36,11 @@ end
 
 def print_date_time
     # Print today's date
-    t = Time.now()
+    t = Time.now();
     t.strftime("The date is %m/%d/%y")
-    print_line_separator
+    print_line_separator;
     puts "Today's date #{t}";
-    print_line_separator
+    print_line_separator;
 end
 
 def print_products_header
@@ -55,36 +55,34 @@ def print_products_header
 end
 
 def get_average_price(prices)
-
-    return prices.inject(:+)/ prices.size;
-    
-
+    return prices.inject(:+) / prices.size;
 end
 
 def print_sales_prices(sales,prices)
 
     # Calcalate and print the total amount of sales
-    puts "*The total amount of sales are #{sales}"
+    puts "*The total amount of sales are #{sales}";
     # Calculate and print the average price the toy sold for
     if (!prices.nil?)
       puts "*Average Price $#{get_average_price(prices)}" ;
     else
-      puts "purchases prices are not present in the json file"
+      puts "purchases prices are not present in the json file";
     end
-      
 
 end
 
 def get_discounts(discounts,purchase_price,toy_full_price)
-    discount= ((purchase_price/toy_full_price))*100 ;
-    discountPerc = 100 - discount
+
+    discount = ((purchase_price / toy_full_price)) * 100;
+    discountPerc = 100 - discount;
     discounts.push(discountPerc);
+
 end
 
 def print_discounts(discounts)
      # Calculate and print the average discount based off the average sales price
-    avg_discount=discounts.inject(:+).to_f / discounts.size;
-    avg_discount =avg_discount
+    avg_discount = discounts.inject(:+).to_f / discounts.size;
+    avg_discount = avg_discount
     puts "*Average Discounts %#{avg_discount.round(2)}" ;
 end
 
@@ -162,11 +160,11 @@ end
 
 def process_brands_information(brandStructure)
     prices = [];
-    sales=[];
+    sales = [];
     totalSalesVolume = [];
   
     #Setup an stock counter in order to count the stock for the brands
-    actualStock=0;
+    actualStock = 0;
     brandStructure.each do |brand|
       # Count the number of the brand's toys we stock
       actualStock = actualStock + brand["stock"]
@@ -184,7 +182,7 @@ end
 def create_brands_report
 
     brandStructure = [];
-    repeatedBrandNameArray=[];
+    repeatedBrandNameArray = [];
     $brands.each do |brandName|
       #checked if we repeated a brandName by see if the brandName String
       # Inside the repeatedBrandNameArray
@@ -192,7 +190,7 @@ def create_brands_report
         print_line_separator;
         #I select all the Brands from the Products Data Structure
         brandStructure = $products_hash["items"].select {|item| item["brand"] == brandName}
-        if (brandStructure.size>0)
+        if (brandStructure.size > 0)
           process_brands_information(brandStructure);
         end
       end
@@ -205,7 +203,7 @@ def create_brands_report
 end
 
 def create_report
-  $brands =[];
+  $brands = [];
   print_date_time;
   print_products_header;
   create_products_report;
