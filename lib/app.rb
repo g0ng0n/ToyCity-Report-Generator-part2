@@ -76,24 +76,23 @@ def print_purchase_information(sales,prices,discounts)
 
     print_sales_prices(sales,prices)
     print_discounts(discounts)
-    
 
 end
 
-def process_purchase_information(toy)
-    sales = 0;
-    prices = [];
-    discounts = [];
-    toy["purchases"].each do |purchase|
-      
-      if (!purchase["price"].nil?)
-        sales = sales + purchase["price"];
-        prices.push(purchase["price"]);     
-        get_discounts(discounts,purchase["price"].to_f,
-          toy["full-price"].to_f);
-      end
-    end
+def process_prices(sales,discounts,prices,purchase_price,toy_full_price)
 
+    sales = sales + purchase_price;
+    prices.push(purchase_price);     
+    get_discounts(discounts,purchase_price.to_f,
+          toy_full_price.to_f);
+end
+
+def process_purchase_information(toy)
+    
+    sales = 0; prices = []; discounts = [];
+    toy["purchases"].each do |purchase|
+        process_prices(sales,discounts,prices,purchase["price"],toy["full-price"]) if (!purchase["price"].nil?)
+    end
     print_purchase_information(sales,prices,discounts)
     
 end
