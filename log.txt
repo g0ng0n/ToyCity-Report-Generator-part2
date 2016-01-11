@@ -1,79 +1,21 @@
-commit 714da5616d861212ddd777cb33d397a7c1630bec
+commit 2713c5f88c72a5d676b6e6b2405f7467213628c7
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 18:58:37 2015 -0300
+Date:   Mon Jan 11 18:25:04 2016 -0300
 
-    added the last commits information into the log.txt file
+    adding some code review changes
 
-commit b5f3254dc2a55db56e6e0c13aed24d3da0548b6c
+commit 9771afbefb5096e47185cfe867d96c0644bad341
+Author: Gonzalo Gisbert <gonzalo@development>
+Date:   Mon Jan 11 15:16:04 2016 -0300
+
+    added some code review changes
+
+commit acb4256eff6391213a72044d2d2e99f53e38e62b
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 18:57:47 2015 -0300
+Date:   Fri Dec 25 11:50:44 2015 -0300
 
-    added the report functionality for every Brand
+    refactor the process_purchase_information method
 
-commit 00e72e1bb6dee22b653fed303d732b93db952e57
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 18:10:16 2015 -0300
-
-    Finish with the products report functionality
-
-commit eb169e4af6e589a646bbd069fccfed80b03d3b04
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 17:33:05 2015 -0300
-
-    Added the first part of the project, the products headers and printing several products information
-
-commit 6e0bc21a569a623db7c4af227be02a407b7cc45f
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Fri Dec 18 23:47:37 2015 -0300
-
-    added some boiler plate code to the app.rb file
-
-commit 70c30267bb7a6b399b688e103446c77a86e5a5b6
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Thu Dec 17 20:14:28 2015 -0300
-
-    initial commit
-commit 7652bf2c285e07b46a18e620c0f00e82006f3ee5
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 19:16:44 2015 -0300
-
-    commit for pre-submit fixes and added the report.txt and log.txt into the root folder of the project
-
-commit 714da5616d861212ddd777cb33d397a7c1630bec
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 18:58:37 2015 -0300
-
-    added the last commits information into the log.txt file
-
-commit b5f3254dc2a55db56e6e0c13aed24d3da0548b6c
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 18:57:47 2015 -0300
-
-    added the report functionality for every Brand
-
-commit 00e72e1bb6dee22b653fed303d732b93db952e57
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 18:10:16 2015 -0300
-
-    Finish with the products report functionality
-
-commit eb169e4af6e589a646bbd069fccfed80b03d3b04
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Sat Dec 19 17:33:05 2015 -0300
-
-    Added the first part of the project, the products headers and printing several products information
-
-commit 6e0bc21a569a623db7c4af227be02a407b7cc45f
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Fri Dec 18 23:47:37 2015 -0300
-
-    added some boiler plate code to the app.rb file
-
-commit 70c30267bb7a6b399b688e103446c77a86e5a5b6
-Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
-Date:   Thu Dec 17 20:14:28 2015 -0300
-
-    initial commit
 commit c6ee5373336ee4cac113b85302f12e36217ca53a
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Thu Dec 24 20:33:29 2015 -0300
