@@ -143,26 +143,25 @@ def print_brand_information(name,actualStock,prices,totalSalesVolume)
     puts "*The total sales volume of all toys for the brand #{name} is: $ #{totalSalesVolume.inject(:+).round(2)}" ;
 end
 
-def process_brands_information(brandStructure)
-    prices = [];
-    sales = [];
-    totalSalesVolume = [];
-  
-    #Setup an stock counter in order to count the stock for the brands
-    actualStock = 0;
+def process_stock_prices(actualStock,prices,totalSalesVolume,brandStructure)
+
     brandStructure.each do |brand|
       # Count the number of the brand's toys we stock
       actualStock = actualStock + brand["stock"]
       # Added the full price to the prices array in order to
       # get the average bellow
-      prices.push(brand["full-price"].to_f);
+      prices.push(brand["full-price"].to_f);  
       #Calculate the total sales for this brand
       brand["purchases"].each{ |p| totalSalesVolume.push(p["price"]) }
+      
     end
+     print_brand_information(brandStructure[0]["brand"],actualStock,prices,totalSalesVolume)
 
-    print_brand_information(brandStructure[0]["brand"],
-      actualStock,prices,totalSalesVolume)
-    
+end
+
+def process_brands_information(brandStructure)
+    prices = []; sales = []; totalSalesVolume = []; actualStock = 0;
+    process_stock_prices(actualStock,prices,totalSalesVolume,brandStructure) 
 end
 def create_brands_report
 
